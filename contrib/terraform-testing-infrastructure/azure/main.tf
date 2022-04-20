@@ -434,6 +434,10 @@ module "config_files" {
 
   accumulo_instance_name = var.accumulo_instance_name
   accumulo_root_password = var.accumulo_root_password
+
+  depends_on = [
+    null_resource.wait_for_manager_cloud_init
+  ]
 }
 
 #
